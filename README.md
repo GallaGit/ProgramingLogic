@@ -41,7 +41,7 @@ Un espacio personal para aprender **logica de programacion desde cero**, resolvi
 ## Fuentes y recursos
 
 > [!TIP]
-> Los ejercicios estan basados en los retos de <link="https://github.com/mouredev/mouredev">MoureDev, una coleccion de **101 ejercicios** clasificados por dificultad (facil, medio, dificil) que cubren desde algoritmos clasicos hasta conexiones con APIs.
+> Los ejercicios estan basados en los retos de https://github.com/mouredev/mouredev, una coleccion de **101 ejercicios** clasificados por dificultad (facil, medio, dificil) que cubren desde algoritmos clasicos hasta conexiones con APIs.
 
 | Recurso | Descripcion |
 |---------|-------------|
