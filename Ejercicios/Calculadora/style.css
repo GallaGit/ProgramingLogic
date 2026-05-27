@@ -33,7 +33,7 @@ body {
 
 .container {
   width: 290px;
-  height: 400px;
+  height: 430px;
   border-radius: 16px;
   padding: 20px;
   background: linear-gradient(160deg, var(--panel-dark), rgba(12, 16, 23, 0.92));
