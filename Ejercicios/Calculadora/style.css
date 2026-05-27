@@ -80,8 +80,9 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.equals-btn {
-  width: 113px
+.clear-btn {
+  background: linear-gradient(180deg, #000000 0%, #ff0a0a 100%);
+  border-color: rgba(58, 80, 104, 0.55);
 }
 
 input {
