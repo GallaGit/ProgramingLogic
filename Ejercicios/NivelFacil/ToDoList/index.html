@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="To Do list.">
+    <meta name="keywords" content="To do list, desarrollo web, desafio informatico">
+    <meta property="og:title" content="To Do list">
+    <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="style.css">
+
+
+    <title>To Do list</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To Do list</h1>
+        </header>
+        <main>
+            <form id="task-form">
+                <ul id="task-list"></ul>
+                <label for="task-input">New Task</label>
+                <input id="task-input" type="text" name="task" 
+                placeholder="Write your task here" autocomplete="off">
+                <button id="add-task" type="button">Add Task</button>
+           </form>
+
+           <!--Filters-->
+            <button id="filter-all" type="button">All</button>
+            <button id="filter-completed" type="button">Task completed</button>
+            <button id="delete-completed" type="button">Delete Task</button>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
