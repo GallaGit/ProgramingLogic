@@ -6,9 +6,7 @@ const result = document.querySelector(".equals-btn")
 const clear = document.querySelector(".clear-btn")
 
 
-let firstNumber = ("");
-let operator = ("");
-let secondNumber = ("");
+
 /*
 LOGICA DE LOS NUMEROS
 1. Guardar botones en una variable
@@ -25,21 +23,30 @@ addNumbers.forEach(number => {
 })
 
 /*LOGICA DE LOS OPERADORES*/
+let firstNumber = ("");
+let operator = ("");
+let secondNumber = ("");
 
 
-if (operator === false) {
-    display.value += firstNumber
-} else if (operator) {
-    display.value += secondNumber
-}
 
-addOperators.forEach(operators => {
-    operators.addEventListener("click", () => {
-        operator = operators.textContent;
+addOperators.forEach(button => {
+    button.addEventListener("click", () => {
+
+        firstNumber = display.value;
+        operator = button.textContent;
+
+        display.value = "";
+
     })
 
 })
 
+
+
+/*LOGICA DEL RESULTADO*/
+
+
+/*Boton de limpiar*/
 clear.addEventListener("click", () => {
     display.value = ("");
 })
