@@ -44,9 +44,33 @@ addOperators.forEach(button => {
 
 
 /*LOGICA DEL RESULTADO*/
+result.addEventListener("click", () => {
+    secondNumber = display.value;
+
+    num1 = Number(firstNumber);
+    num2 = Number(secondNumber);
+
+    let resultValue = 0;
+
+    if (operator === "+") {
+        resultValue = num1 + num2;
+    } else if (operator === "-") {
+        resultValue = num1 - num2;
+    } else if (operator === "*") {
+        resultValue = num1 * num2;
+    } else if (operator === "/") {
+        resultValue = num1 / num2;
+    }
+    
+    display.value = resultValue;
+
+    firstNumber = resultValue;
+    operator = "";
+    secondNumber = "";
+});
 
 
 /*Boton de limpiar*/
 clear.addEventListener("click", () => {
     display.value = ("");
-})
+});

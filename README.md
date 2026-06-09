@@ -34,7 +34,8 @@ Un espacio personal para aprender **logica de programacion desde cero**, resolvi
 
 | # | Ejercicio | Estado | Descripcion |
 |---|-----------|--------|-------------|
-| 1 | [Fizz Buzz](Ejercicios/Fizz-Buzz/) | En Progreso | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
+| 1 | [Fizz Buzz](Ejercicios/NivelFacil/Fizz-Buzz/) | Terminado | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
+| 2 | [Calculadora](Ejercicios/NivelMedio/Calculadora/) | En proceso | Construir una calculadra simple|
 
 ---
 
