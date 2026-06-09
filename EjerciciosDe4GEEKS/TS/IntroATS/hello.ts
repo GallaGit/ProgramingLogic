@@ -50,7 +50,7 @@ console.log(`Publicación de ${postAuthor} tiene ${postLikes} likes. Público: $
 //Tipos de datos primitivos en TypeScript
 const age: number = 30;
 const isStudent: boolean = false;
-const name: string = "Alice"; //se puede usar con "... o con '...' o con `...`"
+const myName: string = "Alice"; //se puede usar con "... o con '...' o con `...`"
 const uniqueId: symbol = Symbol("id");
 let data: null = null;
 let notAssigned: undefined;
