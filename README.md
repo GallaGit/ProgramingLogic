@@ -35,8 +35,9 @@ Un espacio personal para aprender **logica de programacion desde cero**, resolvi
 | # | Ejercicio | Estado | Descripcion |
 |---|-----------|--------|-------------|
 | 1 | [Fizz Buzz](Ejercicios/NivelFacil/Fizz-Buzz/) | Terminado | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
-| 2 | [Calculadora](Ejercicios/NivelMedio/Calculadora/) | Terminado | Construir una calculadra simple|
-
+| 2 | [Contador](Ejercicios/NivelFacil/Contador/) | No Comenzado | Contador [+] y [-] |
+| 3 | [ConvesorDeTemperanturaora](Ejercicios/NivelFacil/ConvesorDeTemperantura/) | No Comenzado | De Celcius a Fereinheit|
+| 4 | [Calculadora](Ejercicios/NivelMedio/Calculadora/) | Terminado | Construir una calculadra simple|
 ---
 
 ## Fuentes y recursos
