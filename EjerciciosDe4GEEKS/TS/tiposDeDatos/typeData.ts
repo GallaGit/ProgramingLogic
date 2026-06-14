@@ -1,5 +1,5 @@
 //Tipos de datos primitivos en TypeScript
-const age: number = 30;
+/*const age: number = 30;
 const isStudent: boolean = false;
 const myName: string = "Alice"; //se puede usar con "... o con '...' o con `...`"
 const uniqueId: symbol = Symbol("id");
