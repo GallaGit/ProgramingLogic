@@ -1,20 +1,17 @@
+"use strict";
 const counter = document.getElementById("counter");
 const increaseBtn = document.getElementById("increaseBtn");
 const resetBtn = document.getElementById("resetBtn");
-
-let valor: number = 0;
-
+let valor = 0;
 increaseBtn?.addEventListener("click", () => {
     valor++;
-
     if (counter) {
         counter.textContent = String(valor);
     }
-})
-
+});
 resetBtn?.addEventListener("click", () => {
     valor = 0;
-    if(counter) {
+    if (counter) {
         counter.textContent = String(valor);
     }
-})
+});
