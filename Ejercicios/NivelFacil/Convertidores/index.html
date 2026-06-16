@@ -4,34 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Convertidodes</title>
+    <title>Convertidor</title>
 </head>
 <body>
-    <h1>Convertidores</h1>
-    <!--Por ahora solo convertiremos de Kg a Libras-->
-    <div>
-        <h2>Convertidor de Masa</h2>
-        <label for="ConvMasa">Convertidor de Masa Kg a lb</label>
-        <input type="text" id="ConvMasa" name="ConvMasa">
-    </div>
-    <!--Por ahora solo convertiremos de Metros a Kilómetros-->
-    <div>
-        <h2>Convertidor de Longitud</h2>
-        <label for="ConvLongitud">Convertidor de Longitud m a km</label>
-        <input type="text" id="ConvLongitud" name="ConvLongitud">
 
-        <select name="ConvLongitud" id="convDistanse">
-            <option value="CtoF">°C a °F</option>
-            <option value="FtoC">°F a °C</option>
-        </select>
-        
-        <button id="convertir">Convertir</button>
-            
-        <p id="resultado"></p>
-    </div>
     <!--Por ahora solo convertiremos de Celsius a Fahrenheit-->
     <div>
-        <h2>Convertidor de Temperatura</h2>
+        <h2>Convertidor Universal</h2>
 
         <label for="ConvTemperatura">Convertidor de Temperatura °C a °F</label>
         <input type="text" id="convTemperatura" name="convTemperatura">
@@ -39,6 +18,10 @@
         <select name="ConvTemp" id="convType">
             <option value="CtoF">°C a °F</option>
             <option value="FtoC">°F a °C</option>
+            <option value="Kg">Kg a lb</option>
+            <option value="Lb">lb a Kg</option>
+            <option value="MtoKm">m a km</option>
+            <option value="KmtoM">km a m</option>
         </select>
         
         <button id="convertir">Convertir</button>
