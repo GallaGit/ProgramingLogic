@@ -1,6 +1,10 @@
+// @ts-ignore
 const counter = document.getElementById("counter");
+// @ts-ignore
 const increaseBtn = document.getElementById("increaseBtn");
+// @ts-ignore
 const resetBtn = document.getElementById("resetBtn");
+// @ts-ignore
 const decreaseBtn = document.getElementById("decreaseBtn");
 
 let valor: number = 0;
