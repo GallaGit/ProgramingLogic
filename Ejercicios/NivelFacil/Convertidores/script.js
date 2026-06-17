@@ -4,29 +4,51 @@ F = (C × 9/5) + 32
 C = (F - 32) × 5/9
 */
 
-const inputTemp = document.getElementById("convTemperatura");
+const inputUni = document.getElementById("convUniv");
 const convType = document.getElementById("convType");
 const convBtn = document.getElementById("convertir");
 const convResult = document.getElementById("resultado");
 
 
 convBtn.addEventListener("click", () => {
-    //const temp = inputTemp.value;
     const conv = convType.value;
-    const tempNumber = Number(inputTemp.value);
+    const uniNumber = Number(inputUni.value);
 
-    if (isNaN(tempNumber)) {
-    console.log("Error. Escribe un numero por favor")
-} else {
-      //falta la formulas si estan en la opcion C-F y F-C
-      if (conv === "CtoF") {
-        //formula C - F
-        convResult.textContent = `${(tempNumber * 9/5) + 32}`;
-      } else {
-        //Formula F to C
-        convResult.textContent = `${(tempNumber - 32) * 5/9}`;
-      }
-}
+    if (isNaN(uniNumber)) {
+      convResult.textContent = "Error. Escribe un numero valido por favor.";
+      return;
+    }
+
+    let result;
+
+    switch (conv) {
+      case "CtoF":
+        result = (uniNumber * 9 / 5) + 32;
+        convResult.textContent = `${uniNumber} °C = ${result.toFixed(2)} °F`;
+        break;
+      case "FtoC":
+        result = (uniNumber - 32) * 5 / 9;
+        convResult.textContent = `${uniNumber} °F = ${result.toFixed(2)} °C`;
+        break;
+      case "Kg":
+        result = uniNumber * 2.20462;
+        convResult.textContent = `${uniNumber} kg = ${result.toFixed(2)} lb`;
+        break;
+      case "Lb":
+        result = uniNumber / 2.20462;
+        convResult.textContent = `${uniNumber} lb = ${result.toFixed(2)} kg`;
+        break;
+      case "MtoKm":
+        result = uniNumber / 1000;
+        convResult.textContent = `${uniNumber} m = ${result.toFixed(3)} km`;
+        break;
+      case "KmtoM":
+        result = uniNumber * 1000;
+        convResult.textContent = `${uniNumber} km = ${result.toFixed(2)} m`;
+        break;
+      default:
+        convResult.textContent = "Selecciona un tipo de conversion valido.";
+    }
 
 });
 
