@@ -5,7 +5,7 @@
 ### Logica de programacion para principiantes
 
 [![Ejercicios](https://img.shields.io/badge/Ejercicios-En%20Progreso-yellow)]()
-[![Nivel](https://img.shields.io/badge/Nivel-Principiante-blue)]()
+[![Nivel](https://img.shields.io/badge/Nivel-Principiante-blue-Intermedio-yellow)]()
 [![Lenguaje](https://img.shields.io/badge/Lenguaje-JavaScript-F7DF1E?logo=javascript&logoColor=black)]()
 
 </div>
