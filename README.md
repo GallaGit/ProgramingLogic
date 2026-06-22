@@ -4,9 +4,8 @@
 
 ### Logica de programacion para principiantes
 
-[![Ejercicios](https://img.shields.io/badge/Ejercicios-En%20Progreso-yellow)]()
-[![Nivel](https://img.shields.io/badge/Nivel-Principiante-blue-Intermedio-yellow)]()
-[![Lenguaje](https://img.shields.io/badge/Lenguaje-JavaScript-F7DF1E?logo=javascript&logoColor=black)]()
+[![Ejercicios](https://img.shields.io/badge/Ejercicios-Principiante-blue)]()
+[![Nivel](https://img.shields.io/badge/Nivel-Principiante-blue)]()[![Static Badge](https://img.shields.io/badge/Intermedio-yellow)]()[![Lenguaje](https://img.shields.io/badge/Lenguaje-JavaScript-F7DF1E?logo=javascript&logoColor=black)]()
 
 </div>
 
@@ -36,8 +35,10 @@ Un espacio personal para aprender **logica de programacion desde cero**, resolvi
 |---|-----------|--------|-------------|
 | 1 | [Fizz Buzz](Ejercicios/NivelFacil/Fizz-Buzz/) | Terminado | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
 | 2 | [Contador](Ejercicios/NivelFacil/Contador/) | Terminado | Contador [+] y [-] |
-| 3 | [ConvesorDeTemperanturaora](Ejercicios/NivelFacil/ConvesorDeTemperantura/) | No Comenzado | De Celcius a Fereinheit|
+| 3 | [ConvesorDeTemperanturaora](Ejercicios/NivelFacil/ConvesorDeTemperantura/) | Terminado y Escalado | De Celcius a Fereinheit y luego a Convertidor Universal|
 | 4 | [Calculadora](Ejercicios/NivelMedio/Calculadora/) | Terminado | Construir una calculadra simple|
+| 5 | [Generador de Contraseñas](Ejercicios/NivelFacil/Fizz-Buzz/) | Terminado | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
+
 ---
 
 ## Fuentes y recursos
