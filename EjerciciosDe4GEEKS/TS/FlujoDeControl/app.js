@@ -1,4 +1,4 @@
-/*"use strict";
+"use strict";
 const posts = [
     { id: 1, content: "¡Hola mundo!", likes: 150, isSponsored: false },
     { id: 2, content: "¡Compra nuestro producto!", likes: 10, isSponsored: true },
@@ -10,6 +10,7 @@ const posts = [
 const popularPosts = [];
 const regularPosts = [];
 const sponsoredPosts = [];
+const zeroLikesPost = [];
 for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
     if (post.isSponsored) {
@@ -18,7 +19,10 @@ for (let i = 0; i < posts.length; i++) {
         continue; // Saltar las comprobaciones adicionales para publicaciones patrocinadas
     }
     // Para publicaciones no patrocinadas, categorizar según los likes
-    if (post.likes >= 100) {
+    if (post.likes === 0) {
+        zeroLikesPost.push(post);
+    }
+    else if (post.likes >= 100) {
         popularPosts.push(post);
     }
     else {
@@ -27,12 +31,4 @@ for (let i = 0; i < posts.length; i++) {
 }
 console.log("Publicaciones Populares:", popularPosts);
 console.log("Publicaciones Regulares:", regularPosts);
-console.log("Publicaciones Patrocinadas:", sponsoredPosts);*/
-
-
-let count = 0;
-for (let i = 0; i < 5; i++) {
-  if (i === 3) continue;
-  count += i;
-}
-console.log(count);
+console.log("Publicaciones Patrocinadas:", sponsoredPosts);
