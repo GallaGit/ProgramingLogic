@@ -1,0 +1,26 @@
+{
+  "name": "programinglogic",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "build:password": "tsc Ejercicios/NivelMedio/GeneradorDeContraseñas/src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GallaGit/ProgramingLogic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GallaGit/ProgramingLogic/issues"
+  },
+  "homepage": "https://github.com/GallaGit/ProgramingLogic#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
