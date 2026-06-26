@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "build:password": "tsc Ejercicios/NivelMedio/GeneradorDeContraseñas/src/app.ts",
+    "build:password": "tsc -p Ejercicios/NivelMedio/GeneradorDeContraseñas",
+    "build:password:watch": "tsc -p Ejercicios/NivelMedio/GeneradorDeContraseñas --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
