@@ -37,7 +37,8 @@ Un espacio personal para aprender **logica de programacion desde cero**, resolvi
 | 2 | [Contador](Ejercicios/NivelFacil/Contador/) | Terminado | Contador [+] y [-] |
 | 3 | [ConvesorDeTemperanturaora](Ejercicios/NivelFacil/ConvesorDeTemperantura/) | Terminado y Escalado | De Celcius a Fereinheit y luego a Convertidor Universal|
 | 4 | [Calculadora](Ejercicios/NivelMedio/Calculadora/) | Terminado | Construir una calculadra simple|
-| 5 | [Generador de Contraseñas](Ejercicios/NivelFacil/Fizz-Buzz/) | Terminado | Sustituir multiplos de 3 y 5 por "Fizz" y "Buzz" |
+| 5 | [Generador de Contraseñas](Ejercicios/NivelMedio/GeneradorDeContraseñas/) | Terminado | Genera contraseñas cuando indicas la cantidad de caracteres |
+| 6 | [🪨 Piedra 📄 Papel ✂️ Tijera](Ejercicios/NivelMedio/Piedra-papel-tijera/) | Proximo |  |
 
 ---
 
