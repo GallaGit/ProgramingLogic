@@ -1,16 +1,15 @@
-/*const piedraBtn = document.getElementById("piedra");
+const piedraBtn = document.getElementById("piedra");
 const papelBtn = document.getElementById("papel");
 const tijeraBtn = document.getElementById("tijera");
 
-let result = "";*/
+/*posibles resultados:*/
+const options = [
+    "🪨 Piedra",
+    "📄 Papel",
+    "✂️ Tijera"
+    ];
 
-/*posibles resultados: 
-🪨 Piedra
-
-📄 Papel
-
-✂️ Tijera
-*/
+let result = "";
 
 /*Pseudo
 1- Click en uno de los 3 botones
@@ -29,7 +28,56 @@ button.addEventListener("click", () => {
     console.log(playerSelection);
     console.log(randomSelection);
 })*/
-console.log("Hola");
 
+/*Flujo
+Jugador pulsa un botón
+        ↓
+Guardamos su elección
+        ↓
+La computadora elige aleatoriamente
+        ↓
+Comparamos las dos elecciones
+        ↓
+Ganaste / Perdiste / Empate
+        ↓
+Mostramos el resultado
+*/
 
-//condiciones del juego
+piedraBtn.addEventListener("click", () => {
+    const playerOption = "🪨 Piedra";
+
+    // Generamos un índice aleatorio
+    const randomIndex = Math.floor(
+        Math.random() * options.length
+    );
+
+    // Obtenemos la opción de la computadora
+    const computerOption = options[randomIndex];
+
+    console.log("Jugador:", playerOption);
+    console.log("PC:", computerOption);
+
+    // Determinamos el resultado
+    if (playerOption === computerOption) {
+        result = "Empate";
+    } else if (
+        playerOption === "🪨 Piedra" &&
+        computerOption === "📄 Papel"
+    ) {
+        result = "Perdiste";
+    } else if (
+        playerOption === "📄 Papel" &&
+        computerOption === "✂️ Tijera"
+    ) {
+        result = "Perdiste";
+    } else if (
+        playerOption === "✂️ Tijera" &&
+        computerOption === "🪨 Piedra"
+    ) {
+        result = "Perdiste";
+    } else {
+        result = "Ganaste";
+    }
+
+    console.log(result);
+});
