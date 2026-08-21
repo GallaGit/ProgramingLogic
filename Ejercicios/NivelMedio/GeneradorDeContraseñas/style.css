@@ -1,0 +1,12 @@
+#generate {
+    width: 100%;
+}
+
+.password-result {
+    font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    background: rgba(46, 196, 182, 0.15);
+    border: 2px dashed rgba(46, 196, 182, 0.45);
+    text-align: center;
+}

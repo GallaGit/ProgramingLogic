@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Generador de Contraseñas</h1>
+<body class="exercise-page">
+    <a class="back-home" href="../../../index.html">← Volver al camino</a>
 
-    <label>Longitud</label>
-    <input type="number" id="length" min="4" max="30">
+    <main class="exercise-shell">
+        <p class="eyebrow">Nivel 05 · Terminado</p>
+        <h1>Generador de Contraseñas</h1>
+        <p class="subtitle">Elige la longitud y genera una cadena aleatoria.</p>
 
-    <button id="generate">Generar</button>
+        <div class="field">
+            <label for="length">Longitud</label>
+            <input type="number" id="length" min="4" max="30" value="12" placeholder="4 – 30">
+        </div>
 
-    <p id="result">0</p>
-    
+        <button type="button" id="generate" class="btn btn-primary">Generar</button>
+
+        <p id="result" class="result-box password-result">—</p>
+    </main>
+
     <script src="src/app.js"></script>
 </body>
 </html>

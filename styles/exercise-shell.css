@@ -1,0 +1,217 @@
+/* Shell visual compartido — Programacion desde Cero */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap");
+
+:root {
+    --ink: #1a2332;
+    --muted: #4a5a6a;
+    --paper: #fff8f0;
+    --coral: #ff6b4a;
+    --teal: #2ec4b6;
+    --sun: #ffd166;
+    --sky: #7bdff2;
+    --shadow: 0 18px 40px rgba(26, 35, 50, 0.12);
+    --radius: 1.35rem;
+    --font-display: "Fredoka", system-ui, sans-serif;
+    --font-body: "Outfit", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body.exercise-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse 70% 45% at 12% 0%, rgba(255, 209, 102, 0.4), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 92% 8%, rgba(46, 196, 182, 0.28), transparent 50%),
+        linear-gradient(160deg, #e8f7ff 0%, var(--paper) 45%, #ffe8dc 100%);
+    padding: 1.25rem;
+}
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.back-home:hover {
+    opacity: 1;
+    transform: translateX(-3px);
+}
+
+.exercise-shell {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1.6rem 1.35rem 1.85rem;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    animation: shellRise 0.55s ease both;
+}
+
+.exercise-shell.wide {
+    max-width: 640px;
+}
+
+.eyebrow {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--coral);
+}
+
+.exercise-shell h1 {
+    margin: 0 0 0.4rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 4.5vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.exercise-shell .subtitle {
+    margin: 0 0 1.35rem;
+    color: var(--muted);
+    line-height: 1.45;
+    font-size: 0.98rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.field label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid rgba(26, 35, 50, 0.1);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.2);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.85rem 1.25rem;
+    border: none;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 0 10px 24px rgba(26, 35, 50, 0.22);
+}
+
+.btn-accent {
+    background: var(--coral);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(255, 107, 74, 0.3);
+}
+
+.btn-teal {
+    background: var(--teal);
+    color: #083b36;
+    box-shadow: 0 10px 24px rgba(46, 196, 182, 0.3);
+}
+
+.btn-ghost {
+    background: rgba(26, 35, 50, 0.08);
+    color: var(--ink);
+}
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    justify-content: center;
+}
+
+.result-box {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+    background: rgba(26, 35, 50, 0.05);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-height: 1.5em;
+    word-break: break-word;
+}
+
+@keyframes shellRise {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

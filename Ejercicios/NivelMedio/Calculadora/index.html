@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="input-section">
-            <input type="text" id="display" readonly>
-            <h3>Casio</h3>
+<body class="exercise-page">
+    <a class="back-home" href="../../../index.html">← Volver al camino</a>
+
+    <main class="exercise-shell calc-shell">
+        <p class="eyebrow">Nivel 04 · Terminado</p>
+        <h1>Calculadora</h1>
+        <p class="subtitle">Operaciones basicas. Tu logica, ahora con cara de juguete.</p>
+
+        <div class="container">
+            <div class="input-section">
+                <p class="calc-brand">Casio</p>
+                <input type="text" id="display" readonly>
+            </div>
+            <div class="buttons-section">
+                <button type="button" class="clear-btn">C</button>
+                <button type="button" class="operator-btn">/</button>
+                <button type="button" class="operator-btn">*</button>
+                <button type="button" class="operator-btn">-</button>
+                <button type="button" class="number-btn">7</button>
+                <button type="button" class="number-btn">8</button>
+                <button type="button" class="number-btn">9</button>
+                <button type="button" class="operator-btn">+</button>
+                <button type="button" class="number-btn">4</button>
+                <button type="button" class="number-btn">5</button>
+                <button type="button" class="number-btn">6</button>
+                <button type="button" class="equals-btn equals-tall">=</button>
+                <button type="button" class="number-btn">1</button>
+                <button type="button" class="number-btn">2</button>
+                <button type="button" class="number-btn">3</button>
+                <button type="button" class="number-btn zero-btn">0</button>
+            </div>
         </div>
-        <div class="buttons-section">
-            <button class="clear-btn">C</button>
-            <button class="operator-btn">+</button>
-            <button class="operator-btn">-</button>
-            <button class="operator-btn">*</button>
-            <button class="operator-btn">/</button>
-            <button class="number-btn">1</button>
-            <button class="number-btn">2</button>
-            <button class="number-btn">3</button>
-            <button class="number-btn">4</button>
-            <button class="number-btn">5</button>
-            <button class="number-btn">6</button>
-            <button class="number-btn">7</button>
-            <button class="number-btn">8</button>
-            <button class="number-btn">9</button>
-            <button class="number-btn">0</button>
-            <button class="equals-btn">=</button>
-        </div>
-    </div>
+    </main>
+
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor Universal</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Convertidor</title>
 </head>
-<body>
-    <div>
-        <h2>Convertidor Universal</h2>
+<body class="exercise-page">
+    <a class="back-home" href="../../../index.html">← Volver al camino</a>
 
-        <label for="convUniv">Convertidor Universal</label>
-        <input type="text" id="convUniv" name="convUniversal">
-        
-        <select name="Convertidor" id="convType">
-            <option value="CtoF">°C a °F</option>
-            <option value="FtoC">°F a °C</option>
-            <option value="Kg">Kg a lb</option>
-            <option value="Lb">lb a Kg</option>
-            <option value="MtoKm">m a km</option>
-            <option value="KmtoM">km a m</option>
-        </select>
-        
-        <button id="convertir">Convertir</button>
-            
-        <p id="resultado"></p>
-    </div>
+    <main class="exercise-shell">
+        <p class="eyebrow">Nivel 03 · Escalado</p>
+        <h1>Convertidor Universal</h1>
+        <p class="subtitle">Temperatura, peso y distancia en un solo panel.</p>
 
-   <script src="script.js"></script>
+        <div class="field">
+            <label for="convUniv">Valor</label>
+            <input type="text" id="convUniv" name="convUniversal" placeholder="Ej: 25">
+        </div>
+
+        <div class="field">
+            <label for="convType">Conversion</label>
+            <select name="Convertidor" id="convType">
+                <option value="CtoF">°C a °F</option>
+                <option value="FtoC">°F a °C</option>
+                <option value="Kg">Kg a lb</option>
+                <option value="Lb">lb a Kg</option>
+                <option value="MtoKm">m a km</option>
+                <option value="KmtoM">km a m</option>
+            </select>
+        </div>
+
+        <button type="button" id="convertir" class="btn btn-primary">Convertir</button>
+
+        <p id="resultado" class="result-box"></p>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

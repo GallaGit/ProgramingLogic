@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div>
-        <p id="counter" arial-live="polite">
-            0
-        </p>
-        <button id="increaseBtn">
-            +
-        </button>
-        <button id="decreaseBtn">
-            -
-        </button>
-        <button id="resetBtn">
-            Reiniciar
-        </button>
-    </div>
+<body class="exercise-page">
+    <a class="back-home" href="../../../index.html">← Volver al camino</a>
+
+    <main class="exercise-shell">
+        <p class="eyebrow">Nivel 02 · Terminado</p>
+        <h1>Contador</h1>
+        <p class="subtitle">Suma, resta y reinicia. Memoria muscular de eventos click.</p>
+
+        <p id="counter" class="counter-value" aria-live="polite">0</p>
+
+        <div class="btn-row">
+            <button type="button" id="decreaseBtn" class="btn btn-ghost counter-btn">−</button>
+            <button type="button" id="resetBtn" class="btn btn-accent">Reiniciar</button>
+            <button type="button" id="increaseBtn" class="btn btn-teal counter-btn">+</button>
+        </div>
+    </main>
+
     <script src="dist/app.js"></script>
 </body>
 </html>

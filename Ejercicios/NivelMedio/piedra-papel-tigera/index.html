@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, Papel, Tijera</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Piedra, Papel, Tijera</h1>
+<body class="exercise-page">
+    <a class="back-home" href="../../../index.html">← Volver al camino</a>
 
-    <button id="piedra">🪨 Piedra</button>
-    <button id="papel">📄 Papel</button>
-    <button id="tijera">✂️ Tijera</button>
+    <main class="game">
+        <header class="game-header">
+            <p class="eyebrow">Nivel 06 · En progreso</p>
+            <h1>Piedra, Papel, Tijera</h1>
+            <p class="subtitle">Elige tu jugada. La PC responde al azar. ¿Quien gana?</p>
+        </header>
 
-    <p id="result"></p>
-    
+        <div class="scoreboard" aria-live="polite">
+            <div class="score">
+                <span class="score-label">Tu</span>
+                <strong id="player-score">0</strong>
+            </div>
+            <div class="score vs">VS</div>
+            <div class="score">
+                <span class="score-label">PC</span>
+                <strong id="pc-score">0</strong>
+            </div>
+        </div>
+
+        <div class="arena" id="arena">
+            <div class="choice player-side">
+                <span class="side-label">Tu</span>
+                <span class="choice-icon" id="player-choice">❔</span>
+            </div>
+            <div class="choice pc-side">
+                <span class="side-label">PC</span>
+                <span class="choice-icon" id="pc-choice">❔</span>
+            </div>
+        </div>
+
+        <p class="result" id="result">Elige una opcion para empezar</p>
+
+        <div class="actions" role="group" aria-label="Elige tu jugada">
+            <button type="button" class="play-btn" id="piedra" data-choice="piedra">
+                <span class="play-icon">🪨</span>
+                <span>Piedra</span>
+            </button>
+            <button type="button" class="play-btn" id="papel" data-choice="papel">
+                <span class="play-icon">📄</span>
+                <span>Papel</span>
+            </button>
+            <button type="button" class="play-btn" id="tijera" data-choice="tijera">
+                <span class="play-icon">✂️</span>
+                <span>Tijera</span>
+            </button>
+        </div>
+    </main>
+
     <script src="app.js"></script>
 </body>
 </html>

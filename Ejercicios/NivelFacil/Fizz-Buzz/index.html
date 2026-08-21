@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fizz-Buzz</title>
+    <title>Fizz Buzz</title>
+    <link rel="stylesheet" href="../../../styles/exercise-shell.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="frame"></div>
-    <div id="screen"></div>
-<!--Este es el enlace a JS-->
-    <link rel="stylesheet" href="script.js">
+<body class="exercise-page">
+    <a class="btn btn-ghost back-btn" href="../../../index.html">← Ir atras</a>
+
+    <main class="exercise-shell wide">
+        <p class="eyebrow">Nivel 01 · Terminado</p>
+        <h1>Fizz Buzz</h1>
+        <p class="subtitle">Del 0 al 100: multiplos de 3 → Fizz, de 5 → Buzz, de ambos → Fizz Buzz.</p>
+
+        <section class="code-block">
+            <h2>El codigo</h2>
+            <pre><code>let i = 0;
+for (i = 0; i &lt;= 100; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("Fizz" + " Buzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+
+}</code></pre>
+        </section>
+
+        <section class="output-block">
+            <h2>Como queda la respuesta</h2>
+            <p class="output-note">Salida en consola (fragmento del inicio):</p>
+            <pre class="output-sample"><code>Fizz Buzz
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+Fizz Buzz
+16
+…
+(sigue hasta 100)</code></pre>
+        </section>
+
+        <a class="btn btn-primary back-btn-bottom" href="../../../index.html">← Ir atras</a>
+    </main>
 </body>
 </html>

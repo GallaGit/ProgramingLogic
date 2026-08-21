@@ -1,98 +1,99 @@
-:root {
-  --bg-black: #090b0f;
-  --bg-gray: #141922;
-  --bg-blue: #1a2233;
-  --panel-dark: rgba(18, 23, 33, 0.82);
-  --panel-border: rgba(159, 176, 209, 0.18);
-  --text-main: #e7ebf4;
-  --text-muted: #a8b1c4;
-  --accent-red: #b23a48;
-  --accent-red-soft: rgba(178, 58, 72, 0.42);
-  --accent-blue: #31496f;
-  --shadow-main: 0 18px 40px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 22px rgba(49, 73, 111, 0.25);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-main);
-  background: radial-gradient(circle at 20% 20%, #1a2233 0%, #0e121a 45%, #090b0f 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px;
-  position: relative;
-  overflow: hidden;
+.calc-shell {
+    max-width: 360px;
+    text-align: center;
 }
 
 .container {
-  width: 290px;
-  height: 430px;
-  border-radius: 16px;
-  padding: 20px;
-  background: linear-gradient(160deg, var(--panel-dark), rgba(12, 16, 23, 0.92));
-  border: 1px solid var(--panel-border);
-  box-shadow: var(--shadow-main), var(--shadow-glow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(4px);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 14px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background: rgba(26, 35, 50, 0.06);
+    border: 2px solid rgba(26, 35, 50, 0.08);
 }
 
-button {
-  border: 1px solid rgba(178, 58, 72, 0.55);
-  border-radius: 10px;
-  background: linear-gradient(180deg, #242d41 0%, #1a2131 100%);
-  color: #f5f7fb;
-  height: 50px;
-  width: 50px;
-  padding: 11px 20px;
-  margin: 4px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(178, 58, 72, 0.32);
+.input-section {
+    margin-bottom: 0.85rem;
 }
 
-button:hover {
-  transform: translateY(-1px);
-  border-color: rgba(210, 89, 103, 0.8);
-  background: linear-gradient(180deg, #2a354b 0%, #1f2739 100%);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.42), 0 0 14px rgba(178, 58, 72, 0.4);
+.calc-brand {
+    margin: 0 0 0.45rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-button:active {
-  transform: translateY(0);
+#display {
+    width: 100%;
+    height: 64px;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(26, 35, 50, 0.1);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 1.65rem;
+    font-weight: 600;
+    text-align: right;
 }
 
-button:focus-visible {
-  outline: 2px solid var(--accent-red);
-  outline-offset: 2px;
+.buttons-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 52px);
+    gap: 0.55rem;
+}
+
+.buttons-section button {
+    border: none;
+    border-radius: 0.85rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 14px rgba(26, 35, 50, 0.1);
+}
+
+.buttons-section button:hover {
+    transform: translateY(-2px);
+}
+
+.buttons-section button:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.buttons-section button:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
+}
+
+.number-btn {
+    background: #fff;
+    color: var(--ink);
+}
+
+.operator-btn {
+    background: rgba(46, 196, 182, 0.35);
+    color: #0f766e;
 }
 
 .clear-btn {
-  background: linear-gradient(180deg, #000000 0%, #ff0a0a 100%);
-  border-color: rgba(58, 80, 104, 0.55);
+    background: rgba(255, 107, 74, 0.9);
+    color: #fff;
 }
 
-input {
-  width: 100%;
-  height: 60px;
-  border-radius: 12px;
-  border: 1px solid rgba(159, 176, 209, 0.18);
-  background: linear-gradient(180deg, var(--panel-dark), rgba(90, 117, 169, 0.92));
-  color: var(--text-main);
-  font-size: 1.5rem;
-  padding: 12px;
-  text-align: right;
+.equals-btn {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.equals-tall {
+    grid-row: span 2;
+}
+
+.zero-btn {
+    grid-column: span 2;
 }

@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de Programación</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Programacion desde Cero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hub.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar"></nav>
+    <div class="bg-blobs" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="blob blob-c"></span>
+    </div>
+
+    <header class="hero">
+        <p class="brand">Programacion desde Cero</p>
+        <h1 class="headline">Tu camino de logica, nivel a nivel</h1>
+        <p class="tagline">Pulsa un ejercicio, juega, rompe cosas y aprende. Cada boton es una parada del recorrido.</p>
+        <div class="cta-row">
+            <a class="cta primary" href="#camino">Explorar el camino</a>
+            <a class="cta ghost" href="https://github.com/GallaGit/ProgramingLogic" target="_blank" rel="noopener">Ver en GitHub</a>
+        </div>
     </header>
-    <main>
-        <section class="landing">
-            <h1>Ejercicios de Programación</h1>
-            <p>Explora mis proyectos y ejercicios de programación.</p>
-        </section>
-        <ul>
-            <li><a href="Ejercicios/NivelMedio/Calculadora/index.html" target="_blank">Calculadora</a></li>
-            <li><a href="Ejercicios/NivelFacil/Convertidores/index.html" target="_blank">Convertidores</a></li>
-            <li><a href="Ejercicios/NivelMedio/GeneradorDeContraseñas/index.html" target="_blank">Generador de Contraseñas</a></li>
-        </ul>
-        
+
+    <main id="camino" class="path-section">
+        <div class="path-header">
+            <h2>El camino</h2>
+            <p>Conecta con animaciones los retos que vas completando.</p>
+            <div class="progress-wrap" aria-live="polite">
+                <div class="progress-meta">
+                    <span id="progress-label">0 / 0 terminados</span>
+                    <span id="progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <ol class="stations" id="stations">
+            <!-- stations injected by hub.js -->
+        </ol>
     </main>
-    <footer></footer>
+
+    <footer class="site-footer">
+        <p>Aprendiendo a pensar como programador, un ejercicio a la vez.</p>
+    </footer>
+
+    <script src="hub.js"></script>
 </body>
 </html>

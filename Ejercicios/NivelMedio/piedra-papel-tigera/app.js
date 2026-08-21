@@ -1,35 +1,24 @@
-const piedraBtn = document.getElementById("piedra");
-const papelBtn = document.getElementById("papel");
-const tijeraBtn = document.getElementById("tijera");
+const options = {
+    piedra: { label: "🪨 Piedra", icon: "🪨" },
+    papel: { label: "📄 Papel", icon: "📄" },
+    tijera: { label: "✂️ Tijera", icon: "✂️" },
+};
 
-/*posibles resultados:*/
-const options = [
-    "🪨 Piedra",
-    "📄 Papel",
-    "✂️ Tijera"
-    ];
+const keys = Object.keys(options);
 
-let result = "";
+const playerChoiceEl = document.getElementById("player-choice");
+const pcChoiceEl = document.getElementById("pc-choice");
+const resultEl = document.getElementById("result");
+const arenaEl = document.getElementById("arena");
+const playerScoreEl = document.getElementById("player-score");
+const pcScoreEl = document.getElementById("pc-score");
+const buttons = document.querySelectorAll(".play-btn");
 
-/*Pseudo
-1- Click en uno de los 3 botones
-2- automaticamente se debe mostrar un random result
-3- condiciones las del uego
-4 mostrar en pantalla result y y tres estados victoria, derrota o empate
-*/
-/*const selection = ["🪨 Piedra" , "📄 Papel" , "✂️ Tijera"]
+let playerScore = 0;
+let pcScore = 0;
+let busy = false;
 
-//jugador
-const playerSelection = "🪨 Piedra";
-
-//PC
-button.addEventListener("click", () => {
-    const randomSelection = Math.floor(Math.random() * selection.length);
-    console.log(playerSelection);
-    console.log(randomSelection);
-})*/
-
-/*Flujo
+/* Flujo
 Jugador pulsa un botón
         ↓
 Guardamos su elección
@@ -43,41 +32,79 @@ Ganaste / Perdiste / Empate
 Mostramos el resultado
 */
 
-piedraBtn.addEventListener("click", () => {
-    const playerOption = "🪨 Piedra";
+function getComputerChoice() {
+    const randomIndex = Math.floor(Math.random() * keys.length);
+    return keys[randomIndex];
+}
 
-    // Generamos un índice aleatorio
-    const randomIndex = Math.floor(
-        Math.random() * options.length
-    );
+function decideWinner(player, computer) {
+    if (player === computer) return "Empate";
 
-    // Obtenemos la opción de la computadora
-    const computerOption = options[randomIndex];
+    const playerLoses =
+        (player === "piedra" && computer === "papel") ||
+        (player === "papel" && computer === "tijera") ||
+        (player === "tijera" && computer === "piedra");
 
-    console.log("Jugador:", playerOption);
-    console.log("PC:", computerOption);
+    return playerLoses ? "Perdiste" : "Ganaste";
+}
 
-    // Determinamos el resultado
-    if (playerOption === computerOption) {
-        result = "Empate";
-    } else if (
-        playerOption === "🪨 Piedra" &&
-        computerOption === "📄 Papel"
-    ) {
-        result = "Perdiste";
-    } else if (
-        playerOption === "📄 Papel" &&
-        computerOption === "✂️ Tijera"
-    ) {
-        result = "Perdiste";
-    } else if (
-        playerOption === "✂️ Tijera" &&
-        computerOption === "🪨 Piedra"
-    ) {
-        result = "Perdiste";
-    } else {
-        result = "Ganaste";
-    }
+function setResultStyle(outcome) {
+    resultEl.classList.remove("win", "lose", "draw", "pop");
+    void resultEl.offsetWidth;
 
-    console.log(result);
+    if (outcome === "Ganaste") resultEl.classList.add("win");
+    else if (outcome === "Perdiste") resultEl.classList.add("lose");
+    else resultEl.classList.add("draw");
+
+    resultEl.classList.add("pop");
+}
+
+function playRound(playerKey) {
+    if (busy) return;
+    busy = true;
+
+    buttons.forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.choice === playerKey);
+    });
+
+    playerChoiceEl.textContent = "❔";
+    pcChoiceEl.textContent = "❔";
+    resultEl.textContent = "La PC esta pensando...";
+    resultEl.classList.remove("win", "lose", "draw");
+
+    arenaEl.classList.remove("reveal");
+    arenaEl.classList.add("shake");
+
+    setTimeout(() => {
+        const computerKey = getComputerChoice();
+        const outcome = decideWinner(playerKey, computerKey);
+
+        arenaEl.classList.remove("shake");
+        arenaEl.classList.add("reveal");
+
+        playerChoiceEl.textContent = options[playerKey].icon;
+        pcChoiceEl.textContent = options[computerKey].icon;
+
+        if (outcome === "Ganaste") {
+            playerScore += 1;
+            playerScoreEl.textContent = String(playerScore);
+        } else if (outcome === "Perdiste") {
+            pcScore += 1;
+            pcScoreEl.textContent = String(pcScore);
+        }
+
+        resultEl.textContent =
+            "Tu: " + options[playerKey].label +
+            " | PC: " + options[computerKey].label +
+            " → " + outcome;
+
+        setResultStyle(outcome);
+        busy = false;
+    }, 450);
+}
+
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        playRound(btn.dataset.choice);
+    });
 });

@@ -1,0 +1,22 @@
+---
+description: Este repo es de aprendizaje manual. No escribir soluciones de ejercicios.
+alwaysApply: true
+---
+
+# ProgramingLogic — aprendizaje a mano
+
+El usuario escribe TODO el codigo de los ejercicios y proyectos. El asistente solo:
+
+- Explica conceptos, errores y el "por que"
+- Da pistas, preguntas guia o pseudocodigo de alto nivel
+- Ayuda a depurar el codigo que el usuario ya escribio
+- Puede crear carpetas, enunciados, placeholders comentados y actualizar el README/hub
+
+El asistente NO:
+
+- Escribe soluciones completas a retos en `Ejercicios/`
+- Completa funciones `TODO` / placeholders de desafios
+- Pega implementaciones listas para copiar (ni "para que compares")
+- Resuelve el proyecto de `Proyectos/` por el usuario
+
+Si pide ayuda con un reto: pregunta que tiene escrito, señala el fallo o da el siguiente paso pequeno — no el algoritmo entero en codigo.
