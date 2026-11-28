@@ -1,0 +1,54 @@
+# Coeficientes de ajuste — TODOS son EJEMPLO, AJUSTAR.
+# No son datos de mercado. Cámbialos según tu experiencia o datos de la agencia.
+# Copia este fichero a coeficientes.toml para personalizarlo.
+
+# Base de m²: construidos (decidido por defecto, revisable)
+base_m2 = "construidos"
+
+# Valor central: mediana (decidido por defecto, revisable)
+valor_central = "mediana"
+
+# Antigüedad máxima de un comparable en meses (decidido: 6, revisable)
+antiguedad_max_meses = 6
+
+# Descuento anuncio → cierre (multiplicador). EJEMPLO, AJUSTAR
+descuento_anuncio = 0.95
+
+# Margen del rango ±. EJEMPLO, AJUSTAR
+margen_rango = 0.05
+
+# Factor IQR para extremos (solo con >= 5 comparables). EJEMPLO, AJUSTAR
+iqr_k = 1.5
+
+# Planta / ascensor. EJEMPLO, AJUSTAR
+# Categorías:
+#   bajo_sin_ascensor: planta 0 sin ascensor
+#   intermedia_con_ascensor: plantas 1-2 con ascensor, o planta 0 con ascensor
+#   alta_con_ascensor: planta >= 3 con ascensor
+#   tercera_o_mas_sin_ascensor: planta >= 3 sin ascensor
+#   intermedia_sin_ascensor: plantas 1-2 sin ascensor
+[planta_ascensor]
+bajo_sin_ascensor = 0.95
+intermedia_sin_ascensor = 0.97
+intermedia_con_ascensor = 1.00
+alta_con_ascensor = 1.03
+tercera_o_mas_sin_ascensor = 0.93
+
+# Estado. EJEMPLO, AJUSTAR
+[estado]
+a_reformar = 0.85
+buen_estado = 1.00
+reformado = 1.08
+
+# Orientación. EJEMPLO, AJUSTAR
+[orientacion]
+exterior = 1.00
+interior = 0.92
+
+# Extras (suma fija en € sobre el valor base). EJEMPLO, AJUSTAR
+# Por defecto 0 para no inventar importes de mercado.
+[extras]
+terraza_fijo_eur = 0.0
+terraza_por_m2_eur = 0.0
+garaje_fijo_eur = 0.0
+trastero_fijo_eur = 0.0

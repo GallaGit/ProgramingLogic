@@ -1,0 +1,6 @@
+precio,m2,tipo_precio,fuente,url,fecha,barrio,planta,ascensor,estado,orientacion,terraza,garaje,trastero,notas
+210000,95,anuncio,Manual,https://example.com/a,2026-09-15,BarrioEjemplo,2,si,buen_estado,exterior,no,no,no,EJEMPLO INVENTADO — no es un dato real
+198000,88,cierre,Agencia,,2026-10-01,BarrioEjemplo,1,si,buen_estado,exterior,no,si,no,EJEMPLO INVENTADO — no es un dato real
+225000,100,anuncio,Manual,https://example.com/c,2026-10-20,BarrioEjemplo,4,si,reformado,exterior,si,no,no,EJEMPLO INVENTADO — no es un dato real
+185000,92,anuncio,Manual,https://example.com/d,2026-08-10,BarrioEjemplo,0,no,a_reformar,interior,no,no,si,EJEMPLO INVENTADO — no es un dato real
+240000,110,cierre,Escritura,,2026-11-01,BarrioEjemplo,5,si,buen_estado,exterior,no,si,si,EJEMPLO INVENTADO — no es un dato real
