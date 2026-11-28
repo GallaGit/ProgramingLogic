@@ -23,4 +23,4 @@ Agentes inmobiliarios (uso inicial: RE/MAX Sorolla, Valencia) que necesitan prep
 | [PREGUNTAS.md](PREGUNTAS.md) | Decisiones pendientes |
 
 ## Estado
-Iteración 1: solo documentación. Sin código.
+Iteraciones 1–4: documentación + núcleo + CLI + Streamlit. Pendiente: informe PDF (iteración 5).

@@ -6,7 +6,7 @@
 Dirección y barrio, m² construidos, m² útiles, habitaciones, baños, planta, ascensor (sí/no), estado (`a_reformar` / `buen_estado` / `reformado`), exterior/interior, terraza (sí/no, opcional m²), garaje, trastero, año de construcción, certificado energético (A–G o "en trámite"/desconocido). Detalle de campos en [DATOS.md](DATOS.md).
 
 ## 2. Comparables
-- Mínimo **3**, máximo **10**, de la **misma zona** (mismo barrio o definición de zona acordada, ver PREGUNTAS).
+- Mínimo **3**, máximo **10**, de la **misma zona** (= **mismo barrio**; decidido por defecto, revisable).
 - Cada uno: precio, m², €/m² (calculado), fuente, URL, fecha, y si es precio de anuncio o de cierre.
 - Entrada manual o CSV. **Sin scraping** de Idealista/Fotocasa.
 - Cada comparable también lleva sus características (planta, ascensor, estado, exterior, extras) para poder **normalizarlo**.
@@ -14,20 +14,19 @@ Dirección y barrio, m² construidos, m² útiles, habitaciones, baños, planta,
 
 ## 3. Pasos del cálculo
 1. **Validar** entrada y comparables.
-2. **Precio de referencia por comparable**: €/m² = precio / m² (base definida en PREGUNTAS: construidos o útiles; debe ser la misma para vivienda y comparables).
-3. **Marcar anuncio vs. cierre** (sección 5) y aplicar el descuento de negociación a los de anuncio.
-4. **Normalizar cada comparable** a las características de la vivienda: se aplica el cociente entre el coeficiente de la vivienda y el del comparable en cada factor (planta/ascensor, estado, exterior). Así se compara "como si fueran iguales".
-5. **Descartar extremos** sobre el €/m² normalizado. Método configurable (por defecto, rango intercuartílico: fuera de `Q1 − k·IQR` / `Q3 + k·IQR`). Con pocos comparables (< 5) no se descarta automáticamente: se avisa de los atípicos. Siempre se informa de qué se descartó.
-6. **Estadísticos**: €/m² medio y mediana de los restantes. Valor base = mediana (configurable: media o mediana).
-7. **Valor base de la vivienda** = €/m² base × m² de la vivienda.
-8. **Extras** (terraza, garaje, trastero) como suma fija o % (parámetro), una vez, sobre el valor base.
-9. **Rango**:
+2. **Precio de referencia por comparable**: €/m² = precio / m² (**base = construidos** por defecto; misma base en vivienda y comparables).
+3. Filtrar por **barrio** y **antigüedad** (máx. 6 meses por defecto, configurable).
+4. **Marcar anuncio vs. cierre** (sección 5) y aplicar el descuento de negociación a los de anuncio.
+5. **Normalizar cada comparable** a las características de la vivienda: cociente entre coeficientes vivienda/comparable (planta/ascensor, estado, exterior).
+6. **Descartar extremos** (IQR) solo con **≥ 5** comparables. Con menos no se descarta. Siempre se informa qué se descartó.
+7. **Estadísticos**: mediana = valor base; media solo informativa.
+8. **Valor base de la vivienda** = €/m² mediana × m² construidos.
+9. **Extras** (terraza, garaje, trastero) como suma fija (parámetro; por defecto 0).
+10. **Rango** con margen fijo ±% (EJEMPLO, AJUSTAR):
    - recomendado = valor base + extras
    - mínimo = recomendado × (1 − margen)
    - máximo = recomendado × (1 + margen)
-
-   `margen` puede ser fijo (EJEMPLO: ±5 %) o derivado de la dispersión de los comparables. Se decide en PREGUNTAS.
-10. **Resultado** con: rango, €/m² usados, comparables incluidos/descartados, coeficientes aplicados y avisos (pocos comparables, alta dispersión, comparables antiguos, mezcla de anuncio/cierre).
+11. **Resultado** con: rango, €/m² usados, comparables incluidos/descartados, explicación de ajustes, coeficientes aplicados y avisos.
 
 ## 4. Coeficientes (parámetros configurables)
 Se guardan en un fichero de configuración (`toml`), no en el código. Multiplicadores sobre el €/m²; 1,00 = sin ajuste.

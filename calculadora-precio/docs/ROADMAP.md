@@ -1,11 +1,11 @@
 # Roadmap
 
-| Iteración | Alcance | Resultado |
+| Iteración | Alcance | Estado |
 |---|---|---|
-| 1 | Solo documentación (este PR) | Docs revisados y preguntas resueltas |
-| 2 | Núcleo de cálculo + tests: modelos pydantic, configuración, normalización, extremos, rango, avisos | Librería con pytest en verde |
-| 3 | CLI con Typer: lee CSV de comparables + datos de la vivienda, imprime/guarda resultado (JSON y texto) | Comando de valoración por CSV |
-| 4 | Interfaz web (Streamlit o FastAPI): formulario de vivienda, carga/edición de comparables, resultado | Uso cómodo antes de la visita |
-| 5 | Informe PDF para el propietario: rango, comparables, metodología y aviso de no tasación | PDF presentable |
+| 1 | Solo documentación | Hecho |
+| 2 | Núcleo de cálculo + tests (pydantic, config TOML, normalización, IQR, rango, avisos) | Hecho (este PR) |
+| 3 | CLI Typer: CSV + vivienda → resultado | Hecho (este PR) |
+| 4 | Interfaz web Streamlit | Hecho (este PR) |
+| 5 | Informe PDF para el propietario | Pendiente |
 
-Cada iteración: rama propia y PR; sin merge sin tu revisión.
+Cada cambio relevante: misma rama / PR hasta revisión; sin merge sin tu OK.
